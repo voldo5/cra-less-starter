@@ -1,23 +1,36 @@
 # Create React App LESS starter
 
-Create React App boilerplate with LESS compiler setup.
+Create React App boilerplate with LESS compiler setup, Ant Design React UI library.
 
-## Available Scripts
+Setup Less with create-react-app, add Ant Design React UI library, get default variables from ant-design default.less file.
 
-In the project directory, you can run:
+https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less  
+https://github.com/voldo5/cra-less-starter  
+https://dev.to/joefstack/how-to-setup-less-with-react-without-ejecting-1nej
 
-### `yarn start`
+npx create-react-app cra-less-starter
+npm install less less-watch-compiler concurrently --save-dev
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+add file less-watcher.config.json
+{
+"watchFolder": "src/",
+"outputFolder": "src/",
+"sourceMap": true,
+"runOnce": false,
+"enableJs": true
+}
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+npm install concurrently --save-dev
 
-### `yarn test`
+add to package.json
+"scripts": {
+"start": "concurrently --kill-others \"less-watch-compiler --config less-watcher.config.json\" \"react-scripts start\"",
+…
+},
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm i -S craco-antd antd
+npm install
+npm start
 
 ### `yarn build`
 
