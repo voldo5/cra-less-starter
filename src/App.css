@@ -1,3 +1,18 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+.custom-btn {
+  background: #d9322c;
+  height: 46px;
+}
+.custom-btn2 {
+  background: #0f3460;
+  height: 24px;
+}
+.ant-btn-primary.custom-btn {
+  background: #61e49e;
+}
 .App {
   text-align: center;
 }
@@ -16,7 +31,7 @@
   color: white;
 }
 .App-link {
-  color: #e94560;
+  color: #d9322c;
 }
 @keyframes App-logo-spin {
   from {
