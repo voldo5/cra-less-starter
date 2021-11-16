@@ -1,6 +1,26 @@
+@import "antd/lib/style/themes/default.less";
+// @height-base: 32px;
+// @height-lg: 40px;
+// @height-sm: 24px;
+
 @app-primary: #0f3460;
+@app-secondary: #d9322c;
+@height-custom: 50px;
 // @app-secondary: #e94560;
-@app-secondary: #70e36f;
+
+.custom-btn {
+  background: @app-secondary;
+  height: @height-lg + 6;
+}
+
+.custom-btn2 {
+  background: @app-primary;
+  height: @height-sm;
+}
+
+.ant-btn-primary.custom-btn {
+  background: #61e49e;
+}
 
 .App {
   text-align: center;
